@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+
+:root {
+  --background: #fafafa;
+  --foreground: #0d0d0d;
+  --card: #ffffff;
+  --card-foreground: #0d0d0d;
+  --popover: #ffffff;
+  --popover-foreground: #0d0d0d;
+  --primary: #6baa2b;
+  --primary-foreground: #0d0d0d;
+  --secondary: #2563eb;
+  --secondary-foreground: #ffffff;
+  --muted: #ededed;
+  --muted-foreground: #666666;
+  --accent: #141414;
+  --accent-foreground: #6baa2b;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #6baa2b;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: ' Sora ', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ' Open Sans ', sans-serif; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(1deg); }
+  66% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+@keyframes kente-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(106, 170, 43, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(106, 170, 43, 0.6), 0 0 60px rgba(106, 170, 43, 0.3); }
+}
+
+@keyframes scroll-indicator {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.5; transform: translateY(8px); }
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, #6baa2b 0%, #2563eb 50%, #141414 100%);
+}
+
+.glow-button {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(106, 170, 43, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 50px rgba(106, 170, 43, 0.5), 0 0 80px rgba(106, 170, 43, 0.3);
+  transform: translateY(-2px);
+}
+
+.kente-border {
+  background-image: linear-gradient(135deg, #e6a31a 0%, #dc2626 25%, #22c55e 50%, #2563eb 75%, #e6a31a 100%);
+  background-size: 200% 200%;
+  animation: kente-shift 6s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.scroll-indicator-anim {
+  animation: scroll-indicator 2s ease-in-out infinite;
+}
