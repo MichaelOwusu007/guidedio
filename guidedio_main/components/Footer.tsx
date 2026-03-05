@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Shield } from "lucide-react";
-//import Image from "next/image";
+import Image from "next/image";
 
 const Footer = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -67,26 +67,26 @@ const Footer = () => {
                 Your Academic & Life Success Companion. AI-powered guidance for every Ghanaian student.
               </p>
               
-            {/* <p className="text-xs font-semibold uppercase text-muted-foreground my-2">
-              Coming Soon On...
-            </p>
+              <p className="text-xs font-semibold uppercase text-white/40 mt-4 mb-2">
+                Coming Soon On
+              </p>
 
-            <div className="flex md:justify-start gap-3">
-              <Image
-                src="/apple.store.png"
-                alt="Download on App Store"
-                width={140}
-                height={42}
-                className="h-10 w-auto"
-              />
-              <Image
-                src="/google-play.png"
-                alt="Get it on Google Play"
-                width={140}
-                height={42}
-                className="h-auto w-24"
-              />
-            </div> */}
+              <div className="flex flex-wrap md:justify-start gap-2 md:gap-3">
+                <Image
+                  src="/apple.store.png"
+                  alt="Download on App Store"
+                  width={120}
+                  height={38}
+                  className="h-9 sm:h-10 w-auto object-contain"
+                />
+                <Image
+                  src="/google-play.png"
+                  alt="Get it on Google Play"
+                  width={120}
+                  height={38}
+                  className="h-9 sm:h-10 w-auto object-contain"
+                />
+              </div>
             </div>
             <div>
               <h5 className="font-['Sora'] font-semibold text-white mb-3">Quick Links</h5>

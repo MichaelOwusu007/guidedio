@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import confetti from "canvas-confetti"; 
-import { Send, Share2, CheckCircle2, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Send, Share2, CheckCircle2, Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react";
 
 const levels = ["JHS Student", "SHS Student", "University Student", "Parent"];
 
@@ -16,7 +16,7 @@ const socialLinks = [
   },
   {
     label: "Twitter",
-    href: "https://x.com/guidedio?s=11",
+    href: "https://x.com/guidediohq?s=11",
     icon: Twitter,
     color: "bg-black",
   },
@@ -25,6 +25,12 @@ const socialLinks = [
     href: "https://instagram.com/guidedio",
     icon: Instagram,
     color: "bg-[#E4405F]",
+  },
+  {
+    label: "WhatsApp",
+    href: "https://whatsapp.com/channel/0029VbCBpnxAO7R85PBHEP0b",
+    icon: MessageCircle,
+    color: "bg-[#25D366]",
   },
 ];
 
@@ -256,7 +262,7 @@ const WaitlistForm = () => {
             <CheckCircle2 size={16} className="text-[#6baa2b]" /> Free to join
           </span>
           <span className="flex items-center gap-2">
-            <CheckCircle2 size={16} className="text-[#6baa2b]" /> Students only
+            <CheckCircle2 size={16} className="text-[#6baa2b]" /> everyone's welcome
           </span>
           <span className="flex items-center gap-2">
             <CheckCircle2 size={16} className="text-[#6baa2b]" /> Launch day perks

@@ -1,38 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Brain, Heart, Bot, Globe } from "lucide-react";
+import { GraduationCap, Brain, Heart, Bot, Globe, Sparkles } from "lucide-react";
 
 const visionBlocks = [
   {
     icon: GraduationCap,
-    emoji: "🎓",
     title: "Expanded Educational Coverage",
     items: ["JHS to Career lifecycle profile", "Comprehensive academic tracking", "Multi-institution support"],
   },
   {
     icon: Brain,
-    emoji: "🧠",
     title: "AI Academic Intelligence",
     items: ["Smart recommendations", "Success probability prediction", "Skill gap analysis", "Trend forecasting"],
   },
   {
     icon: Heart,
-    emoji: "❤️",
     title: "Mental Health & Wellness",
     items: ["AI stress detection", "24/7 wellness chatbot", "Mood tracking", "Crisis detection"],
   },
   {
     icon: Bot,
-    emoji: "🤖",
     title: "Advanced AI Features",
     items: ["Voice assistant (local languages)", "Document analysis", "Career matching", "Virtual campus tours"],
   },
   {
     icon: Globe,
-    emoji: "🌍",
     title: "Community & Mentorship",
     items: ["Alumni network", "Virtual career fairs", "Mentorship marketplace", "Peer support groups"],
+  },
+  {
+    icon: Sparkles,
+    title: "And So Much More",
+    items: ["Continuous improvements", "New features monthly", "Beta access for waitlist", "Student-first approach"],
   },
 ];
 
@@ -68,7 +68,7 @@ const FutureVision = () => {
               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
               className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl"
             >
-              <span className="text-3xl mb-4 block">{v.emoji}</span>
+              <v.icon className="w-8 h-8 text-[#6baa2b] mb-4" />
               <h3 className="font-['Sora'] font-bold text-lg mb-3 text-white">{v.title}</h3>
               <ul className="space-y-2">
                 {v.items.map((item) => (

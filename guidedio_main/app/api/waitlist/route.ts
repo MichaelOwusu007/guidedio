@@ -39,16 +39,17 @@ export async function POST(request: NextRequest) {
         <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; line-height: 1.6;">
           <h2>Hello ${name},</h2>
 
-          <p>Thank you for joining the <strong>Guidedio</strong> waitlist! 🎉</p>
+          <p>Thank you for joining the <strong>Guidedio</strong> waitlist!</p>
 
           <p>You're now on the list for early access to the future of academic guidance. We'll notify you before our <strong>June launch</strong>.</p>
 
-          <p>In the meantime, stay connected with us:</p>
+          <p>Stay connected with us:</p>
 
           <p>
-            🔗 LinkedIn: <a href="https://www.linkedin.com/company/guidedio" target="_blank">Guidedio</a><br />
-            🐦 Twitter: <a href="https://x.com/guidedio?s=11" target="_blank">@Guidedio</a><br />
-            📸 Instagram: <a href="https://instagram.com/guidedio" target="_blank">@Guidedio</a>
+            LinkedIn: <a href="https://www.linkedin.com/company/guidedio" target="_blank">Guidedio</a><br />
+            Twitter: <a href="https://x.com/guidediohq?s=11" target="_blank">@Guidedio</a><br />
+            Instagram: <a href="https://instagram.com/guidedio" target="_blank">@Guidedio</a><br />
+            WhatsApp Channel: <a href="https://whatsapp.com/channel/0029VbCBpnxAO7R85PBHEP0b" target="_blank">Join our WhatsApp Community</a>
           </p>
 
           <p>We can't wait to revolutionize academic guidance together!</p>
@@ -56,7 +57,7 @@ export async function POST(request: NextRequest) {
           <br />
 
           <p>Warm regards,</p>
-          <p><strong>The Guidedio Team</strong> 📚</p>
+          <p><strong>The Guidedio Team</strong></p>
         </div>
       `,
     });
