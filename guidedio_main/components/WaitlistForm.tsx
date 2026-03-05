@@ -10,7 +10,7 @@ const levels = ["JHS Student", "SHS Student", "University Student", "Parent"];
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/guidedio",
+    href: "https://www.linkedin.com/company/guidedio/",
     icon: Linkedin,
     color: "bg-[#0077b5]",
   },
