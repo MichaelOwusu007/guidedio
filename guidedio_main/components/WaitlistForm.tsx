@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import confetti from "canvas-confetti"; 
+import confetti from " canvas-confetti "; 
 import { Send, Share2, CheckCircle2 } from "lucide-react";
 
 const levels = ["JHS Student", "SHS Student", "University Student", "Parent"];
