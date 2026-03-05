@@ -55,7 +55,7 @@ const SocialProof = () => {
         >
           <div className="bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg inline-flex flex-col items-center px-12 py-8 rounded-3xl">
             <p className="font-['Sora'] text-5xl md:text-6xl font-bold text-[#6baa2b] mb-2">
-              <AnimatedCounter target={1284} />+
+              <AnimatedCounter target={50} />+
             </p>
             <p className="text-[#666666] font-medium">Students Already on the Waitlist</p>
           </div>
