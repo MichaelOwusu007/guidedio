@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@type": "Organization",
               name: "HireYourMate",
               url: "https://www.guidedio.com",
-              logo: "https://www.hireyourmate.com/images/og-image.png",
+              logo: "https://www.guidedio.com/images/og-image.png",
               sameAs: [
                 "https://twitter.com/hireyourmate",
                 "https://www.linkedin.com/company/hireyourmate",
