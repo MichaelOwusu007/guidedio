@@ -9,6 +9,7 @@ import SocialProof from "@/components/SocialProof";
 import FinalCTA from "@/components/FinalCTA";
 import CollaborationSection from "@/components/CollaborationSection";
 import Footer from "@/components/Footer";
+import ConfettiEffect from "@/components/ConfettiEffect";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Timeline />
       <SocialProof />
       <FinalCTA />
+      <ConfettiEffect />
       <CollaborationSection />
       <Footer />
     </div>
