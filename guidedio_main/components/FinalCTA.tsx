@@ -28,7 +28,7 @@ const FinalCTA = () => {
             href="#waitlist"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative overflow-hidden bg-[#6baa2b] text-black px-8 py-4 sm:px-10 sm:py-5 rounded-xl text-lg sm:text-xl font-bold inline-flex items-center gap-3 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5 animate-[pulse-glow_2s_ease-in-out_infinite]"
+            className="relative overflow-hidden bg-[#0d2086] text-white px-8 py-4 sm:px-10 sm:py-5 rounded-xl text-lg sm:text-xl font-bold inline-flex items-center gap-3 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5 animate-[pulse-glow_2s_ease-in-out_infinite]"
           >
             Join the Guidedio Waitlist
             <Sparkles size={22} />

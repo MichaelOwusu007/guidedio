@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Shield } from "lucide-react";
+//import Image from "next/image";
 
 const Footer = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -46,11 +47,11 @@ const Footer = () => {
           </p>
           <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
             {timerBlocks.map((t) => (
-              <div key={t.label} className="bg-white/10 backdrop-blur-lg rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 min-w-15 sm:min-w-17.5">
-                <p className="font-['Sora'] text-xl sm:text-2xl md:text-4xl font-bold text-[#6baa2b]">
+              <div key={t.label} className="bg-[#0d2086] backdrop-blur-lg rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 min-w-15 sm:min-w-17.5">
+                <p className="font-['Sora'] text-xl sm:text-2xl md:text-4xl font-bold text-white">
                   {String(t.value).padStart(2, "0")}
                 </p>
-                <p className="text-white/40 text-[10px] sm:text-xs">{t.label}</p>
+                <p className="text-white/80 text-[10px] sm:text-xs">{t.label}</p>
               </div>
             ))}
           </div>
@@ -65,6 +66,27 @@ const Footer = () => {
               <p className="text-white/50 text-sm leading-relaxed">
                 Your Academic & Life Success Companion. AI-powered guidance for every Ghanaian student.
               </p>
+              
+            {/* <p className="text-xs font-semibold uppercase text-muted-foreground my-2">
+              Coming Soon On...
+            </p>
+
+            <div className="flex md:justify-start gap-3">
+              <Image
+                src="/apple.store.png"
+                alt="Download on App Store"
+                width={140}
+                height={42}
+                className="h-10 w-auto"
+              />
+              <Image
+                src="/google-play.png"
+                alt="Get it on Google Play"
+                width={140}
+                height={42}
+                className="h-auto w-24"
+              />
+            </div> */}
             </div>
             <div>
               <h5 className="font-['Sora'] font-semibold text-white mb-3">Quick Links</h5>
@@ -78,7 +100,7 @@ const Footer = () => {
               <h5 className="font-['Sora'] font-semibold text-white mb-3">Contact</h5>
               <div className="space-y-2">
                 <p className="text-sm text-white/50 flex items-center gap-2">
-                  <Mail size={14} /> hello@guidedio.com
+                  <Mail size={14} /> hello.guidedio@gmail.com
                 </p>
                 <p className="text-sm text-white/50 flex items-center gap-2">
                   <MapPin size={14} /> Accra, Ghana

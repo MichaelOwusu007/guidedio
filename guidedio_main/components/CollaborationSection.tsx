@@ -6,24 +6,18 @@ const partners = [
   {
     name: "WAEC",
     fullName: "West African Examinations Council",
-    desc: "Official examination body — integrating results and aggregate data.",
+    desc: "Official examination body — integrating results and aggregate database.",
     color: "bg-blue-600",
     initials: "WAEC",
   },
   {
-    name: "University of Ghana",
-    fullName: "University of Ghana, Legon",
-    desc: "Ghana's premier university — program data and admission partnerships.",
+    name: "Universities/Colleges",
+    fullName: "Universities in Ghana",
+    desc: "Ghana's premier universities and colleges — program data and admission partnerships.",
     color: "bg-blue-800",
-    initials: "UG",
+    initials: "UNI",
   },
-  {
-    name: "KNUST",
-    fullName: "Kwame Nkrumah University of Science & Technology",
-    desc: "Leading STEM university — cut-off points and career pathway data.",
-    color: "bg-yellow-600",
-    initials: "KNUST",
-  },
+
   {
     name: "GES",
     fullName: "Ghana Education Service",
@@ -31,13 +25,7 @@ const partners = [
     color: "bg-green-700",
     initials: "GES",
   },
-  {
-    name: "NaCCA",
-    fullName: "National Council for Curriculum & Assessment",
-    desc: "Curriculum standards — ensuring alignment with national education goals.",
-    color: "bg-emerald-600",
-    initials: "NaCCA",
-  },
+
 ];
 
 const CollaborationSection = () => {

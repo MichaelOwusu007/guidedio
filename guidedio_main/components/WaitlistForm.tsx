@@ -3,44 +3,83 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import confetti from "canvas-confetti"; 
-import { Send, Share2, CheckCircle2 } from "lucide-react";
+import { Send, Share2, CheckCircle2, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const levels = ["JHS Student", "SHS Student", "University Student", "Parent"];
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/guidedio",
+    icon: Linkedin,
+    color: "bg-[#0077b5]",
+  },
+  {
+    label: "Twitter",
+    href: "https://x.com/guidedio?s=11",
+    icon: Twitter,
+    color: "bg-black",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/guidedio",
+    icon: Instagram,
+    color: "bg-[#E4405F]",
+  },
+];
 
 const WaitlistForm = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", level: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
-    await new Promise((res) => setTimeout(res, 1200));
-
-    setLoading(false);
-    setSubmitted(true);
-
-    const duration = 3000;
-    const end = Date.now() + duration;
-    const frame = () => {
-      confetti({
-        particleCount: 3,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: ["#84cc16", "#3b82f6", "#000000", "#a3e635"],
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
-      confetti({
-        particleCount: 3,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: ["#84cc16", "#3b82f6", "#000000", "#a3e635"],
-      });
-      if (Date.now() < end) requestAnimationFrame(frame);
-    };
-    frame();
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || data.message || "Failed to submit");
+      }
+
+      setLoading(false);
+      setSubmitted(true);
+
+      const duration = 3000;
+      const end = Date.now() + duration;
+      const frame = () => {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ["#84cc16", "#3b82f6", "#000000", "#a3e635"],
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ["#84cc16", "#3b82f6", "#000000", "#a3e635"],
+        });
+        if (Date.now() < end) requestAnimationFrame(frame);
+      };
+      frame();
+    } catch (err) {
+      setLoading(false);
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setError(message);
+    }
   };
 
   return (
@@ -56,7 +95,7 @@ const WaitlistForm = () => {
           className="text-center mb-10"
         >
           <h2 className="font-['Sora'] text-3xl md:text-4xl font-bold mb-4 text-[#0d0d0d]">
-            Reserve Your <span className="bg-clip-text text-transparent bg-linear-to-r from-[#6baa2b] via-[#2563eb] to-[#141414]">Early Access</span> Spot
+            Reserve Your <span className="bg-clip-text text-transparent bg-black">Early Access</span> Spot
           </h2>
           <p className="text-[#666666] text-lg">
             Limited spots available. Be among the first to experience the future of academic guidance.
@@ -81,7 +120,7 @@ const WaitlistForm = () => {
                   maxLength={100}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Kwame Asante"
+                  placeholder="Micahel Owusu"
                   className="w-full px-4 py-3 rounded-xl bg-[#fafafa] border border-[#e0e0e0] focus:border-[#6baa2b] focus:ring-2 focus:ring-[#6baa2b]/20 outline-none transition-all text-[#0d0d0d]"
                 />
               </div>
@@ -132,7 +171,7 @@ const WaitlistForm = () => {
                 disabled={loading}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full relative overflow-hidden bg-[#6baa2b] text-black py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 disabled:opacity-60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5"
+                className="w-full relative overflow-hidden bg-[#0d2086] text-white py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 disabled:opacity-60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5"
               >
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
@@ -143,6 +182,10 @@ const WaitlistForm = () => {
                   </>
                 )}
               </motion.button>
+
+              {error && (
+                <p className="text-red-500 text-sm text-center">{error}</p>
+              )}
             </motion.form>
           ) : (
             <motion.div
@@ -177,6 +220,48 @@ const WaitlistForm = () => {
             </motion.div>
           )}
         </AnimatePresence>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-10"
+        >
+          <p className="text-sm font-semibold text-[#666666] mb-4 text-center">Join our community</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${social.color} text-white px-5 py-3 rounded-full text-sm font-medium flex items-center gap-2 hover:opacity-90 transition-opacity`}
+              >
+                <social.icon size={18} />
+                {social.label}
+              </a>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-[#666666]"
+        >
+          <span className="flex items-center gap-2">
+            <CheckCircle2 size={16} className="text-[#6baa2b]" /> Free to join
+          </span>
+          <span className="flex items-center gap-2">
+            <CheckCircle2 size={16} className="text-[#6baa2b]" /> Students only
+          </span>
+          <span className="flex items-center gap-2">
+            <CheckCircle2 size={16} className="text-[#6baa2b]" /> Launch day perks
+          </span>
+        </motion.div>
       </div>
     </section>
   );

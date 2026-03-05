@@ -42,10 +42,10 @@ const ProblemSection = () => {
           className="text-center mb-14"
         >
           <h2 className="font-['Sora'] text-3xl md:text-4xl font-bold mb-4 text-[#0d0d0d]">
-            The Problem Students <span className="bg-clip-text text-transparent bg-linear-to-r from-[#6baa2b] via-[#2563eb] to-[#141414]">Face Today</span>
+            The Problem Students <span className="bg-clip-text text-transparent bg-black">Face Today</span>
           </h2>
           <p className="text-[#666666] text-lg max-w-2xl mx-auto">
-            Ghanaian students navigate one of life's biggest decisions — their future — without the right tools.
+            Ghanaian students navigate one of life's biggest decisions to their future without the right tools.
           </p>
         </motion.div>
 
@@ -57,13 +57,13 @@ const ProblemSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow group"
+              className="bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow  group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#dc2626]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <p.icon style={{ color: "#dc2626" }} size={24} />
+              <div className="w-12 h-12 rounded-xl bg-[#0d2086] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <p.icon style={{ color: "#ffffff" }} size={24} />
               </div>
-              <h3 className="font-['Sora'] font-bold text-lg mb-2 text-[#0d0d0d]">{p.title}</h3>
-              <p className="text-[#666666] text-sm leading-relaxed">{p.desc}</p>
+              <h3 className="font-['Sora'] font-bold text-lg mb-2  text-[#0d0d0d]">{p.title}</h3>
+              <p className="text-[#666666]  text-sm leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
         </div>

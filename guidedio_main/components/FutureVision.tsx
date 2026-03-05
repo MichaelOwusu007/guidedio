@@ -53,7 +53,7 @@ const FutureVision = () => {
             This Is Bigger Than University Selection
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Our vision extends beyond academic guidance — we're building the complete student success ecosystem for Africa.
+            Our vision extends beyond academic guidance we're building the complete student success ecosystem for Africa.
           </p>
         </motion.div>
 

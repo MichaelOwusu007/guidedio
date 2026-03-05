@@ -24,22 +24,22 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-[#6baa2b]/10 text-[#0d0d0d] px-4 py-2 rounded-full text-sm font-semibold mb-6"
+              className="inline-flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-sm font-semibold mb-6"
             >
-              <Sparkles size={16} style={{ color: "#6baa2b" }} />
+              <Sparkles size={16} style={{ color: "#84db2c" }} />
               Launching June 2026
             </motion.div>
 
-            <h1 className="font-['Sora'] text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight mb-6 text-[#0d0d0d]">
+            <h1 className="font-[' OpenSans'] text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight mb-6 text-[#0d0d0d]">
               Your Academic Future,{" "}
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-[#6baa2b] via-[#2563eb] to-[#141414]">
+              <span className="bg-clip-text text-transparent bg-lime-400">
                 Guided Right.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-[#666666] mb-8 max-w-xl mx-auto lg:mx-0">
-              AI-powered academic guidance that helps Ghanaian students choose the right programs,
-              calculate aggregates, and plan their future with confidence.
+              Academic guidance that helps Ghanaian students choose the right programs,
+              calculate aggregates, and plan their future with confidence. 
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -47,7 +47,7 @@ const Hero = () => {
                 href="#waitlist"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative overflow-hidden bg-[#6baa2b] text-black px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl text-base font-bold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5"
+                className="relative overflow-hidden bg-[rgb(13,32,134)] text-white px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl text-base font-bold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5"
               >
                 Join the Waitlist
                 <Sparkles size={18} />
@@ -73,22 +73,22 @@ const Hero = () => {
               <div className="bg-white/70 backdrop-blur-xl border border-[#e0e0e0] shadow-lg rounded-3xl p-6 max-w-md mx-auto ">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-3 h-3 rounded-full bg-[#dc2626]" />
-                  <div className="w-3 h-3 rounded-full bg-[#6baa2b]" />
-                  <div className="w-3 h-3 rounded-full bg-[#2563eb]" />
+                  <div className="w-3 h-3 rounded-full bg-[#dceb0a]" />
+                  <div className="w-3 h-3 rounded-full bg-[#52f114]" />
                 </div>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 p-3 bg-[#6baa2b]/10 rounded-xl">
-                    <BookOpen style={{ color: "#6baa2b" }} size={20} />
+                  <div className="flex items-center gap-3 p-3 bg-black/80 rounded-xl">
+                    <BookOpen style={{ color: "#52f114" }} size={20} />
                     <div>
-                      <p className="text-sm font-semibold text-[#0d0d0d]">Program Match</p>
-                      <p className="text-xs text-[#666666]">Computer Science — 95% fit</p>
+                      <p className="text-sm text-white font-semibold ">Program Match</p>
+                      <p className="text-xs text-[#ddd9d9]">Computer Science — 95% fit</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 bg-[#2563eb]/10 rounded-xl">
-                    <Brain style={{ color: "#2563eb" }} size={20} />
+                  <div className="flex items-center gap-3 p-3 bg-[rgb(13,32,134)]/80 rounded-xl">
+                    <Brain style={{ color: "#52f114" }} size={20} />
                     <div>
-                      <p className="text-sm font-semibold text-[#0d0d0d]">Aggregate Score</p>
-                      <p className="text-xs text-[#666666]">Calculated: 8 — Excellent</p>
+                      <p className="text-sm font-semibold text-white">Aggregate Score</p>
+                      <p className="text-xs text-[#ddd9d9]">Calculated: 8 — Excellent</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
@@ -97,26 +97,26 @@ const Hero = () => {
                       <p className="text-[10px] text-[#666666] leading-tight">Universities Matched</p>
                     </div>
                     <div className="rounded-xl bg-[#6baa2b]/10 p-3 text-center">
-                      <p className="font-['Sora'] text-2xl font-bold text-[#6baa2b]">A1</p>
+                      <p className="font-['Sora'] text-2xl font-bold text-lime-400">A1</p>
                       <p className="text-[10px] text-[#666666] leading-tight">Top Grade</p>
                     </div>
                     <div className="rounded-xl bg-[#2563eb]/10 p-3 text-center">
-                      <p className="font-['Sora'] text-2xl font-bold text-[#2563eb]">92%</p>
+                      <p className="font-['Sora'] text-2xl font-bold text-[rgb(13,32,134)]">92%</p>
                       <p className="text-[10px] text-[#666666] leading-tight">Career Fit</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-[#141414]/5 rounded-xl">
-                    <TrendingUp style={{ color: "#6baa2b" }} size={20} />
+                    <TrendingUp style={{ color: "#52f114" }} size={20} />
                     <div className="flex-1">
                       <p className="text-sm font-semibold text-[#0d0d0d]">Admission Chances</p>
                       <div className="w-full bg-[#ededed] rounded-full h-2 mt-1">
-                        <div className="bg-[#6baa2b] h-2 rounded-full" style={{ width: "85%" }} />
+                        <div className="bg-lime-400 h-2 rounded-full" style={{ width: "85%" }} />
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-[#6baa2b]/5 rounded-xl">
                     <Users style={{ color: "#2563eb" }} size={18} />
-                    <p className="text-xs text-[#666666]">1,284 students already exploring programs</p>
+                    <p className="text-xs text-[#0c0c0c]">100+ students already on our waitlist</p>
                   </div>
                 </div>
               </div>
@@ -128,7 +128,7 @@ const Hero = () => {
               className="absolute -top-4 -right-4 bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg rounded-full px-4 py-2"
             >
               <span className="text-sm font-semibold text-[#0d0d0d] flex items-center gap-1">
-                <Award size={14} style={{ color: "#6baa2b" }} /> AI Powered
+                <Award size={14} style={{ color: "#6baa2b" }} /> Made for Ghana
               </span>
             </motion.div>
             <motion.div
@@ -136,7 +136,7 @@ const Hero = () => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -bottom-4 -left-4 bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg rounded-full px-4 py-2"
             >
-              <span className="text-sm font-semibold text-[#0d0d0d]">Made for Ghana</span>
+              <span className="text-sm font-semibold text-[#0d0d0d]">Guidedio.com</span>
             </motion.div>
           </motion.div>
         </div>
@@ -148,10 +148,10 @@ const Hero = () => {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <a href="#problem" className="flex flex-col items-center gap-2 text-[#666666] animate-[scroll-indicator_2s_ease-in-out_infinite]">
+        {/* <a href="#problem" className="flex flex-col items-center gap-2 text-[#666666] animate-[scroll-indicator_2s_ease-in-out_infinite]">
           <span className="text-xs font-medium">Scroll to explore</span>
           <ChevronDown size={20} />
-        </a>
+        </a> */}
       </motion.div>
     </section>
   );

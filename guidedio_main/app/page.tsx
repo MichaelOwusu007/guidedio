@@ -5,7 +5,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import WaitlistForm from "@/components/WaitlistForm";
 import FutureVision from "@/components/FutureVision"; 
 import Timeline from "@/components/Timeline";
-import SocialProof from "@/components/SocialProof";
+//import SocialProof from "@/components/SocialProof";
 import FinalCTA from "@/components/FinalCTA";
 import CollaborationSection from "@/components/CollaborationSection";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ const Index = () => {
       <WaitlistForm />
       <FutureVision />
       <Timeline />
-      <SocialProof />
+      {/* <SocialProof /> */}
       <FinalCTA />
       <ConfettiEffect />
       <CollaborationSection />

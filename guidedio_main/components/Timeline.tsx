@@ -8,14 +8,14 @@ const phases = [
     icon: Rocket,
     phase: "Phase 1",
     title: "June Launch",
-    desc: "Academic Guidance Tools — Program recommendations, aggregate calculator, cut-off points, and student dashboard.",
+    desc: "Academic Guidance Tools— Program recommendations,Results checking, Uni/College forms,Aggregate calculator, cut-off points,technical skills and student dashboard.",
     status: "current",
   },
   {
     icon: Brain,
     phase: "Phase 2",
     title: "AI & Personalization",
-    desc: "Smart AI recommendations, success prediction, personalized learning paths, and advanced career matching.",
+    desc: "Smart AI recommendations, personalized learning paths,sloved past questions, advanced career matching and learning resources(JHA,SHS,UNI).",
     status: "upcoming",
   },
   {
@@ -38,7 +38,7 @@ const Timeline = () => {
           className="text-center mb-14"
         >
           <h2 className="font-['Sora'] text-3xl md:text-4xl font-bold mb-4 text-[#0d0d0d]">
-            Our <span className="bg-clip-text text-transparent bg-linear-to-r from-[#6baa2b] via-[#2563eb] to-[#141414]">Roadmap</span>
+            Our <span className="bg-clip-text text-transparent bg-black">Roadmap</span>
           </h2>
           <p className="text-[#666666] text-lg">From launch to a complete student success ecosystem.</p>
         </motion.div>
@@ -61,7 +61,7 @@ const Timeline = () => {
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center ${
                     p.status === "current"
-                      ? "bg-[#6baa2b] shadow-[0_0_20px_rgba(106,170,43,0.3)] animate-[pulse-glow_2s_ease-in-out_infinite]"
+                      ? "bg-lime-400 shadow-[0_0_20px_rgba(106,170,43,0.3)] animate-[pulse-glow_2s_ease-in-out_infinite]"
                       : "bg-[#ededed] border-2 border-[#e0e0e0]"
                   }`}
                 >

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image"
 
 const navLinks = [
   { label: "Problem", href: "#problem" },
@@ -34,23 +35,29 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <a href="#" className="font-['Sora'] text-2xl font-bold text-[#0d0d0d]">
-            Guide<span style={{ color: "#6baa2b" }}>dio</span>
-          </a>
+           <a href="/" className="text-xl font-display font-bold">
+      <Image
+                  src="/logo.png"
+                  alt="Our Logo"
+                  width={138}
+                  height={52}
+                  className="h-auto w-16 md:w-20 "
+                />
+        </a>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-[#666666] hover:text-[#6baa2b] transition-colors"
+                className="text-lg font-medium text-[#666666] hover:text-[#8ef12a] transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#waitlist"
-              className="relative overflow-hidden bg-[#6baa2b] text-black px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_50px_rgba(106,170,43,0.5),0_0_80px_rgba(106,170,43,0.3)] hover:translate-y-0.5"
+              className="relative overflow-hidden bg-[rgb(13,32,134)] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_50px_rgba(106,170,43,0.5),0_0_80px_rgba(106,170,43,0.3)] hover:translate-y-0.5"
             >
               Join Waitlist
             </a>
@@ -80,7 +87,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-xl font-['Sora'] font-semibold text-[#0d0d0d] hover:text-[#6baa2b] transition-colors"
+                  className="text-xl font-['Sora'] font-semibold text-[#0d0d0d] hover:text-[#8cf028] transition-colors"
                 >
                   {link.label}
                 </a>
@@ -88,7 +95,7 @@ const Navbar = () => {
               <a
                 href="#waitlist"
                 onClick={() => setMobileOpen(false)}
-                className="relative overflow-hidden bg-[#6baa2b] text-black px-6 py-3 rounded-lg text-center font-semibold mt-4 transition-all duration-300 hover:shadow-[0_0_50px_rgba(106,170,43,0.5),0_0_80px_rgba(106,170,43,0.3)] hover:translate-y-0.5"
+                className="relative overflow-hidden bg-[rgb(13,32,134)] text-white px-6 py-3 rounded-lg text-center font-semibold mt-4 transition-all duration-300 hover:shadow-[0_0_50px_rgba(106,170,43,0.5),0_0_80px_rgba(106,170,43,0.3)] hover:translate-y-0.5"
               >
                 Join Waitlist
               </a>
