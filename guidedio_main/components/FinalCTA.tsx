@@ -22,7 +22,7 @@ const FinalCTA = () => {
             <span className="bg-clip-text text-transparent bg-linear-to-r from-[#6baa2b] via-[#2563eb] to-[#141414]">Future of Student Success</span>
           </h2>
           <p className="text-[#666666] text-lg mb-8 max-w-xl mx-auto">
-            Don't miss out on early access. Join 1,200+ students already waiting for Guidedio.
+            Don't miss out on early access. Join 100+ students already waiting for Guidedio.
           </p>
           <motion.a
             href="#waitlist"

@@ -5,7 +5,7 @@ import { ChevronDown, Sparkles, BookOpen, Brain, TrendingUp, Users, Award } from
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden lg:pt-16">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#6baa2b]/10 blur-3xl animate-[float_6s_ease-in-out_infinite]" />
         <div className="absolute bottom-1/4 right-1/4 w-60 h-60 md:w-80 md:h-80 rounded-full bg-[#2563eb]/10 blur-3xl animate-[float_6s_ease-in-out_2s_infinite]" />
@@ -39,7 +39,7 @@ const Hero = () => {
 
             <p className="text-base sm:text-lg text-[#666666] mb-8 max-w-xl mx-auto lg:mx-0">
               Academic guidance that helps Ghanaian students choose the right programs,
-              calculate aggregates, and plan their future with confidence. 
+              calculate aggregates, and plan their future with confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">

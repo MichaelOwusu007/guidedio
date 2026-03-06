@@ -67,11 +67,11 @@ const Footer = () => {
                 Your Academic & Life Success Companion. AI-powered guidance for every Ghanaian student.
               </p>
               
-              <p className="text-xs font-semibold uppercase text-white/40 mt-4 mb-2">
+              {/* <p className="text-xs font-semibold uppercase text-white/40 mt-4 mb-2">
                 Coming Soon On
-              </p>
+              </p> */}
 
-              <div className="flex flex-wrap md:justify-start gap-2 md:gap-3">
+              {/* <div className="flex flex-wrap md:justify-start gap-2 md:gap-3">
                 <Image
                   src="/apple.store.png"
                   alt="Download on App Store"
@@ -86,7 +86,7 @@ const Footer = () => {
                   height={38}
                   className="h-9 sm:h-10 w-auto object-contain"
                 />
-              </div>
+              </div> */}
             </div>
             <div>
               <h5 className="font-['Sora'] font-semibold text-white mb-3">Quick Links</h5>

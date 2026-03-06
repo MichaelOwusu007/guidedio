@@ -50,10 +50,10 @@ const FutureVision = () => {
           className="text-center mb-14"
         >
           <h2 className="font-['Sora'] text-3xl md:text-4xl font-bold mb-4 text-white">
-            This Is Bigger Than University Selection
+            This Is Bigger Than Just Academic Guidance
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Our vision extends beyond academic guidance we're building the complete student success ecosystem for Africa.
+            Our vision extends beyond academic guidance we're building the complete student success ecosystem for Africa.The Student Panacea.
           </p>
         </motion.div>
 
