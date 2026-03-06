@@ -15,7 +15,7 @@ const phases = [
     icon: Brain,
     phase: "Phase 2",
     title: "AI & Personalization",
-    desc: "Smart AI recommendations, personalized learning paths,sloved past questions, advanced career matching and learning resources(JHA,SHS,UNI).",
+    desc: "Smart AI recommendations, personalized learning paths,solved past questions, advanced career matching and learning resources(JHS,SHS,UNI).",
     status: "upcoming",
   },
   {
