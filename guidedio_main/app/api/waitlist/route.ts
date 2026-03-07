@@ -48,7 +48,6 @@ export async function POST(request: NextRequest) {
           <p>
             LinkedIn: <a href="https://www.linkedin.com/company/guidedio/" target="_blank">Guidedio</a><br />
             Twitter: <a href="https://x.com/guidediohq?s=11" target="_blank">@Guidedio</a><br />
-            Instagram: <a href="https://instagram.com/guidedio" target="_blank">@Guidedio</a><br />
             WhatsApp Channel: <a href="https://whatsapp.com/channel/0029VbCBpnxAO7R85PBHEP0b" target="_blank">Join our WhatsApp Community</a>
           </p>
 

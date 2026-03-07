@@ -20,12 +20,12 @@ const socialLinks = [
     icon: Twitter,
     color: "bg-black",
   },
-  {
-    label: "Instagram",
-    href: "https://instagram.com/guidedio",
-    icon: Instagram,
-    color: "bg-[#E4405F]",
-  },
+  // {
+  //   label: "Instagram",
+  //   href: "https://instagram.com/guidedio",
+  //   icon: Instagram,
+  //   color: "bg-[#E4405F]",
+  // },
   {
     label: "WhatsApp",
     href: "https://whatsapp.com/channel/0029VbCBpnxAO7R85PBHEP0b",
