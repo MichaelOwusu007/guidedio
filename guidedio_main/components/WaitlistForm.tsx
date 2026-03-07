@@ -175,12 +175,40 @@ const WaitlistForm = () => {
               <motion.button
                 type="submit"
                 disabled={loading}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full relative overflow-hidden bg-[#0d2086] text-white py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 disabled:opacity-60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5"
+                whileHover={!loading ? { scale: 1.02 } : {}}
+                whileTap={!loading ? { scale: 0.98 } : {}}
+                className="w-full relative overflow-hidden bg-[#0d2086] text-white py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 disabled:opacity-80 transition-all duration-300 hover:shadow-[0_0_30px_rgba(106,170,43,0.4)] hover:translate-y-0.5"
               >
                 {loading ? (
-                  <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="flex items-center gap-2"
+                  >
+                    <motion.span
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      className="flex items-center justify-center"
+                    >
+                      <Send size={18} />
+                    </motion.span>
+                    <span>Reserving your spot</span>
+                    <motion.span
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 0.6, repeat: Infinity }}
+                      className="w-2 h-2 bg-white rounded-full"
+                    />
+                    <motion.span
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
+                      className="w-2 h-2 bg-white rounded-full"
+                    />
+                    <motion.span
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
+                      className="w-2 h-2 bg-white rounded-full"
+                    />
+                  </motion.div>
                 ) : (
                   <>
                     Reserve My Spot
